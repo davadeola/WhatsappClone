@@ -27,6 +27,7 @@ public class FindUserActivity extends AppCompatActivity {
         userList = new ArrayList<>();
 
         initializeRecyclerView();
+        getContactList();
     }
 
     private void getContactList(){
@@ -38,6 +39,9 @@ public class FindUserActivity extends AppCompatActivity {
             UserObject mContact = new UserObject(name, phone);
             userList.add(mContact);
 
+
+            //informs the adapter of change in the list
+            mUserListAdapter.notifyDataSetChanged();
         }
     }
 
