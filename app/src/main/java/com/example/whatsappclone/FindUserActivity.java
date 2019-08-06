@@ -15,7 +15,7 @@ public class FindUserActivity extends AppCompatActivity {
 
     private RecyclerView mUserList;
     private RecyclerView.Adapter mUserListAdapter;
-    private RecyclerView.LayoutManager mUserListLayoutManager;
+    private LinearLayoutManager mUserListLayoutManager;
 
     ArrayList<UserObject> userList;
 

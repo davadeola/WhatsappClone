@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 import androidx.annotation.NonNull;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText mPhoneNumber, mCode;
     private Button mSend;
