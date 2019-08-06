@@ -17,13 +17,14 @@ public class FindUserActivity extends AppCompatActivity {
     private RecyclerView.Adapter mUserListAdapter;
     private LinearLayoutManager mUserListLayoutManager;
 
-    ArrayList<UserObject> userList;
+    ArrayList<UserObject> userList, contactList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_user);
 
+        contactList = new ArrayList<>();
         userList = new ArrayList<>();
 
         initializeRecyclerView();
@@ -37,7 +38,8 @@ public class FindUserActivity extends AppCompatActivity {
             String phone = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 
             UserObject mContact = new UserObject(name, phone);
-            userList.add(mContact);
+
+            contactList.add(mContact);
 
 
             //informs the adapter of change in the list
